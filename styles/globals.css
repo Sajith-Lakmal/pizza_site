@@ -1,16 +1,176 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url("https://fonts.googlapi.com/css?family=Montserrat:300,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat" sans-serif;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 * {
   box-sizing: border-box;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  justify-content: space-between;
+}
+
+header ul li {
+  list-style: none;
+  font-weight: 700;
+}
+.container {
+  padding: 40px 40px;
+}
+
+header button {
+  padding: 10px;
+  justify-content: conter;
+  width: 60px;
+  height: 60px;
+  outline: none;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 5);
+  border-radius: 15px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  align-items: center;
+  align-items: center;
+}
+
+header .circle {
+  background: #ff7a01;
+  box-shadow: 8px 5px 18px rgba(0, 0, 0, 0.25);
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: 25px;
+  position: absolute;
+  color: white;
+  top: -8px;
+  right: -8px;
+}
+.content {
+  display: flex;
+  width: 100%;
+}
+.info {
+  width: 40%;
+  padding: 40px;
+}
+.info h1 {
+  font-family: "Chelsea Market", cursive;
+  font-size: 3em;
+  color: red;
+}
+.pizzaBox {
+  color: #037943;
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.price {
+  font-size: 2em;
+  margin: 5px;
+  font-weight: 600;
+}
+.info button {
+  margin: 0px 10px 10px 0px;
+  background-color: #ff7a01;
+  padding: 5px;
+  align-items: center;
+  display: flex;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  justify-content: space-evenly;
+  width: 150px;
+  height: 40px;
+  outline: none;
+  border: none;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.15);
+  color: white;
+}
+
+.image-container {
+  width: 60%;
+  margin: 60px;
+  min-width: 200px;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.image-container img {
+  position: 0px 0px;
+  width: 100%;
+}
+
+.socialButtons {
+  width: 20%;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.links a {
+  height: 100px;
+  text-decoration: none;
+  transform: rotate(-90deg);
+
+  color: black;
+  font-weight: 700;
+}
+.navigation-buttons {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+.navigation-buttons .next-btn {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+  background-color: #ff7a01;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  align-items: center;
+  transition: width 0.5s ease, height 0.5s ease;
+}
+.navigation-buttons .next-btn:hover {
+  width: 60px;
+  height: 60px;
+}
+.navigation-buttons .previous-btn:hover {
+  width: 60px;
+  height: 60px;
+}
+.navigation-buttons .previous-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 60px;
+  bottom: 0px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+  transition: width 0.5s ease, height 0.5s ease;
 }

@@ -1,65 +1,105 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React from "react";
+import Head from "next/head";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+const index = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
+    <>
+      <Head>Pizza box</Head>
+      <div className="container">
+        <header>
+          <Image
+            src="/images/logo.svg"
+            width="100px"
+            height="100px"
+            layout="intrinsic"
+          />
+          <ul>
+            <li>Products</li>
+            <li>Sobre nosotros</li>
+            <li>Vidos</li>
+            <li>DOnde comprar</li>
+          </ul>
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <Image
+              src="/images/basket.svg"
+              alt="Cart"
+              width="40px"
+              height="40px"
+              layout="intrinsic"
+            />
+            <div className="circle">1</div>
+          </motion.button>
+        </header>
+        <div className="content">
+          <div className="info">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <span className="pizzaBox">Pizza box</span>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Veritatis, soluta.
             </p>
-          </a>
+            <span className="price">$15.23</span>
+            <motion.button
+              className="infoButton"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Image
+                src="/images/basket_white.svg"
+                alt="Cart"
+                width="20px"
+                height="20px"
+                layout="intrinsic"
+              />
+              <span>Buy Now</span>
+            </motion.button>
+          </div>
+          <div className="image-container">
+            <Image
+              src="/images/pizza.svg"
+              width="1000px"
+              height="1000px"
+              layout="intrinsic"
+            />
+          </div>
+          <div className="socialButtons">
+            <div className="links">
+              <Link href="" target="_blank">
+                <a>Instegram</a>
+              </Link>
+              <Link href="" target="_blank">
+                <a>Facebook</a>
+              </Link>
+              <Link href="" target="_blank">
+                <a>Twiter</a>
+              </Link>
+            </div>
+          </div>
+          <div className="navigation-buttons">
+            <button type="button" className="previous-btn">
+              <Image
+                src="/images/arrow-l.svg"
+                alt="previous"
+                width="100px"
+                height="100px"
+              />
+            </button>
+            <button type="button" className="next-btn">
+              <Image
+                src="/images/arrow-r.svg"
+                alt="next"
+                width="100px"
+                height="100px"
+              />
+            </button>
+          </div>
         </div>
-      </main>
+      </div>
+    </>
+  );
+};
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
-}
+export default index;
